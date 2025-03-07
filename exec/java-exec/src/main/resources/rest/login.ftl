@@ -26,11 +26,11 @@
     <form role="form" name="input" action="/hdsp-queryengine/j_security_check" method="POST">
       <fieldset>
         <div class="form-group">
-          <img src="/static/img/apache-drill-logo.png" alt="Apache Drill Logo">
+          <#--  <img src="/hdsp-queryengine/static/img/apache-drill-logo.png" alt="Apache Drill Logo">  -->
           <#if model??>
             <p style="color:red">${model}</p></br>
           </#if>
-          <h4>Log In to Drill Web Console</h4></br>
+          <h4>Log In to Query Engine Web Console</h4></br>
           <p><input type="text" size="30" name="j_username" placeholder="Username" autofocus></p>
           <p><input type="password" size="30" name="j_password" placeholder="Password" autocomplete="off"></p>
           <p><button type="submit" class="btn btn-light">Log In</button> </p>
