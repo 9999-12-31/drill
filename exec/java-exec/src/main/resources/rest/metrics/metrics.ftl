@@ -182,7 +182,7 @@
     };
 
     var update = function() {
-      $.get("/status/metrics", function(metrics) {
+      $.get("/hdsp-queryengine/status/metrics", function(metrics) {
         updateGauges(metrics.gauges);
         updateBars(metrics.gauges);
         if(! $.isEmptyObject(metrics.timers)) createTable(metrics.timers, "timers");

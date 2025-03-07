@@ -34,7 +34,7 @@
             <#list model as log>
             <tr>
                 <td>
-                    <a href="/log/${log.getName()}/content">
+                    <a href="/hdsp-queryengine/log/${log.getName()}/content">
                         <div style="height:100%;width:100%;white-space:pre-line">${log.getName()}</div>
                     </a>
                 </td>

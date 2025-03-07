@@ -19,21 +19,21 @@
 -->
 <#include "*/generic.ftl">
 <#macro page_head>
-<script src="/static/js/d3.v3.js"></script>
-<script src="/static/js/dagre-d3.min.js"></script>
-<script src="/static/js/graph.js"></script>
-<script src="/static/js/datatables.min.js"></script>
-<script src="/static/js/jquery.form.js"></script>
-<script src="/static/js/querySubmission.js"></script>
+<script src="/hdsp-queryengine/static/js/d3.v3.js"></script>
+<script src="/hdsp-queryengine/static/js/dagre-d3.min.js"></script>
+<script src="/hdsp-queryengine/static/js/graph.js"></script>
+<script src="/hdsp-queryengine/static/js/datatables.min.js"></script>
+<script src="/hdsp-queryengine/static/js/jquery.form.js"></script>
+<script src="/hdsp-queryengine/static/js/querySubmission.js"></script>
 <!-- Ace Libraries for Syntax Formatting -->
-<script src="/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/hdsp-queryengine/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
 <!-- Disabled in favour of dynamic: script src="/static/js/ace-code-editor/mode-sql.js" type="text/javascript" charset="utf-8" -->
-<script src="/dynamic/mode-sql.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/js/ace-code-editor/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/js/ace-code-editor/theme-sqlserver.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/js/ace-code-editor/snippets/sql.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/js/ace-code-editor/mode-snippets.js" type="text/javascript" charset="utf-8"></script>
-<link href="/static/css/datatables.min.css" rel="stylesheet">
+<script src="/hdsp-queryengine/dynamic/mode-sql.js" type="text/javascript" charset="utf-8"></script>
+<script src="/hdsp-queryengine/static/js/ace-code-editor/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="/hdsp-queryengine/static/js/ace-code-editor/theme-sqlserver.js" type="text/javascript" charset="utf-8"></script>
+<script src="/hdsp-queryengine/static/js/ace-code-editor/snippets/sql.js" type="text/javascript" charset="utf-8"></script>
+<script src="/hdsp-queryengine/static/js/ace-code-editor/mode-snippets.js" type="text/javascript" charset="utf-8"></script>
+<link href="/hdsp-queryengine/static/css/datatables.min.css" rel="stylesheet">
 <style>
   table.dataTable th {background-color: transparent}
 </style>
@@ -123,7 +123,7 @@
     //Cancel query & show cancellation status
     function cancelQuery() {
       document.getElementById("cancelTitle").innerHTML = "Drillbit on " + location.hostname + " says";
-      $.get("/profiles/cancel/" + globalconfig.queryid, function(data, status){/*Not Tracking Response*/});
+      $.get("/hdsp-queryengine/profiles/cancel/" + globalconfig.queryid, function(data, status){/*Not Tracking Response*/});
       //Show PopUp Modal
       $("#queryCancelModal").modal("show");
     };
@@ -172,7 +172,7 @@
       <p>
 
        <#-- DRILL-7697: merge with copy in query.ftl -->
-       <form role="form" id="queryForm" action="/query" method="POST">
+       <form role="form" id="queryForm" action="/hdsp-queryengine/query" method="POST">
           <#if model.isOnlyImpersonationEnabled()>
             <div class="form-group">
               <label for="userName">User Name</label>
@@ -233,7 +233,7 @@
       </p>
 
       <p>
-      <form action="/profiles/cancel/${model.queryId}" method="GET">
+      <form action="/hdsp-queryengine/profiles/cancel/${model.queryId}" method="GET">
         <div class="form-group">
           <button type="submit" class="btn btn-warning">Cancel query</button>
         </div>
@@ -560,7 +560,7 @@
         var i;
         for (i = 0; i < tagElemList.length; i++) {
             var content = tagElemList[i].innerHTML;
-            tagElemList[i].innerHTML = "<img src='/static/img/turtle.png' alt='slow'> " + content;
+            tagElemList[i].innerHTML = "<img src='/hdsp-queryengine/static/img/turtle.png' alt='slow'> " + content;
         }
     }
 

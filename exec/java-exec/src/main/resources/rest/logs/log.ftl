@@ -24,7 +24,7 @@
 <#macro page_body>
 <h3>${model.getName()} <span class="badge alert-info">(last ${model.getMaxLines()} lines)</span></h3>
 <p>
-    <a href="/log/${model.getName()}/download">Download Full Log</a>
+    <a href="/hdsp-queryengine/log/${model.getName()}/download">Download Full Log</a>
 </p>
     <#if (model.getLines()?size > 0)>
     <pre class="border bg-light p-2">

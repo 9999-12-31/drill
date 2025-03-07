@@ -191,7 +191,7 @@ public class WebServer implements AutoCloseable {
 
     final ServletContextHandler servletContextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
     servletContextHandler.setErrorHandler(errorHandler);
-    servletContextHandler.setContextPath("/");
+    servletContextHandler.setContextPath("/hdsp-queryengine");
 
     final ServletHolder servletHolder = new ServletHolder(new ServletContainer(
         new DrillRestServer(workManager, servletContextHandler.getServletContext(), drillbit)));

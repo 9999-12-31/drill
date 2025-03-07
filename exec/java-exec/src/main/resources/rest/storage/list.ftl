@@ -20,12 +20,12 @@
 
 <#include "*/generic.ftl">
 <#macro page_head>
-  <script src="/static/js/jquery.form.js"></script>
+  <script src="/hdsp-queryengine/static/js/jquery.form.js"></script>
 
   <!-- Ace Libraries for Syntax Formatting -->
-  <script src="/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/serverMessage.js"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/serverMessage.js"></script>
 </#macro>
 
 <#macro page_body>
@@ -180,7 +180,7 @@
         </div>
         <div class="modal-body">
 
-          <form id="createForm" role="form" action="/storage/create_update" method="POST">
+          <form id="createForm" role="form" action="/hdsp-queryengine/storage/create_update" method="POST">
             <input type="text" class="form-control" name="name" placeholder="Storage Name">
             <h3>Configuration</h3>
             <div class="form-group">
@@ -211,7 +211,7 @@
         showConfirmationDialog('"' + name + '"' + ' plugin will be disabled. Proceed?', proceed);
       }
       function proceed() {
-        $.post("/storage/" + encodeURIComponent(name) + "/enable/" + flag, function(data) {
+        $.post("/hdsp-queryengine/storage/" + encodeURIComponent(name) + "/enable/" + flag, function(data) {
           if (data.result === "Success") {
             location.reload();
           } else {
@@ -227,7 +227,7 @@
     }
 
     function doUpdate(name) {
-      window.location.href = "/storage/" + encodeURIComponent(name);
+      window.location.href = "/hdsp-queryengine/storage/" + encodeURIComponent(name);
     }
 
     function doCreate() {
@@ -292,9 +292,9 @@
           } else if (modal.find('#disabled').is(":checked")) {
             pluginGroup = 'disabled';
           }
-          url = '/storage/' + pluginGroup + '/plugins/export/' + format;
+          url = '/hdsp-queryengine/storage/' + pluginGroup + '/plugins/export/' + format;
         } else {
-          url = '/storage/' + encodeURIComponent(exportInstance) + '/export/' + format;
+          url = '/hdsp-queryengine/storage/' + encodeURIComponent(exportInstance) + '/export/' + format;
         }
         window.open(url);
       });

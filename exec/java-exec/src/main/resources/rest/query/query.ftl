@@ -19,16 +19,16 @@
 -->
 <#include "*/generic.ftl">
 <#macro page_head>
-  <script src="/static/js/jquery.form.js"></script>
-  <script src="/static/js/querySubmission.js"></script>
+  <script src="/hdsp-queryengine/static/js/jquery.form.js"></script>
+  <script src="/hdsp-queryengine/static/js/querySubmission.js"></script>
   <!-- Ace Libraries for Syntax Formatting -->
-  <script src="/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
   <!-- Disabled in favour of dynamic: script src="/static/js/ace-code-editor/mode-sql.js" type="text/javascript" charset="utf-8" -->
-  <script src="/dynamic/mode-sql.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/theme-sqlserver.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/snippets/sql.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/mode-snippets.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/dynamic/mode-sql.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/theme-sqlserver.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/snippets/sql.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/mode-snippets.js" type="text/javascript" charset="utf-8"></script>
 </#macro>
 
 <#macro page_body>
@@ -42,7 +42,7 @@
 <#include "*/runningQuery.ftl">
 
   <#-- DRILL-7697: merge with copy in profile.ftl -->
-  <form role="form" id="queryForm" action="/query" method="POST">
+  <form role="form" id="queryForm" action="/hdsp-queryengine/query" method="POST">
     <#if model.isOnlyImpersonationEnabled()>
       <div class="form-group">
         <label for="userName">User Name</label>

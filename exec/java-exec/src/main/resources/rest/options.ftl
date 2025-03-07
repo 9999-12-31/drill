@@ -19,7 +19,7 @@
 -->
 <#include "*/generic.ftl">
 <#macro page_head>
-    <script type="text/javascript" language="javascript"  src="/static/js/datatables.min.js"> </script>
+    <script type="text/javascript" language="javascript"  src="/hdsp-queryengine/static/js/datatables.min.js"> </script>
     <script>
     //Alter System Values
     function alterSysOption(optionName, optionValue, optionKind) {
@@ -32,7 +32,7 @@
         } else { //Apply filter for updated field
             redirectHref = redirectHref + "?filter=" + optionName;
         }
-        $.post("/option/"+optionName, {
+        $.post("/hdsp-queryengine/option/"+optionName, {
           kind: optionKind,
           name: optionName,
           value: optionValue,
@@ -67,8 +67,8 @@
     }
     </script>
     <!-- List of Option Descriptions -->
-    <script src="/dynamic/options.describe.js"></script>
-    <link href="/static/css/datatables.min.css" rel="stylesheet">
+    <script src="/hdsp-queryengine/dynamic/options.describe.js"></script>
+    <link href="/hdsp-queryengine/static/css/datatables.min.css" rel="stylesheet">
 </#macro>
 
 <#macro page_body>

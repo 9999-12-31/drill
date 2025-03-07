@@ -20,16 +20,16 @@
 
 <#include "*/generic.ftl">
 <#macro page_head>
-  <script src="/static/js/jquery.form.js"></script>
+  <script src="/hdsp-queryengine/static/js/jquery.form.js"></script>
   <!-- Ace Libraries for Syntax Formatting -->
-  <script src="/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/serverMessage.js"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/serverMessage.js"></script>
 </#macro>
 
 <#macro page_body>
   <h3>Configuration</h3>
-  <form id="updateForm" role="form" action="/storage/create_update" method="POST">
+  <form id="updateForm" role="form" action="/hdsp-queryengine/storage/create_update" method="POST">
     <input type="hidden" name="name" value="${model.getPlugin().getName()}" />
     <input type="hidden" name="pluginType" value="${model.getType()}" />
     <div class="form-group">
@@ -37,7 +37,7 @@
       <textarea class="form-control" id="config" name="config" data-editor="json" style="display: none;" >
       </textarea>
     </div>
-    <a class="btn btn-secondary" href="/storage">Back</a>
+    <a class="btn btn-secondary" href="/hdsp-queryengine/storage">Back</a>
     <button class="btn btn-primary" type="submit" onclick="doUpdate();">Update</button>
   <#if model.getPlugin().enabled()>
       <a id="enabled" class="btn btn-warning">Disable</a>
@@ -111,7 +111,7 @@
       textarea.val(editor.getSession().getValue());
     });
 
-    $.get("/storage/" + encodeURIComponent("${model.getPlugin().getName()}") + ".json", function(data) {
+    $.get("/hdsp-queryengine/storage/" + encodeURIComponent("${model.getPlugin().getName()}") + ".json", function(data) {
       $("#config").val(JSON.stringify(data.config, null, 2));
       editor.getSession().setValue( JSON.stringify(data.config, null, 2) );
     });
@@ -125,7 +125,7 @@
         proceed();
       }
       function proceed() {
-        $.post("/storage/" + encodeURIComponent("${model.getPlugin().getName()}") + "/enable/" + !enabled, function(data) {
+        $.post("/hdsp-queryengine/storage/" + encodeURIComponent("${model.getPlugin().getName()}") + "/enable/" + !enabled, function(data) {
           if (serverMessage(data)) {
               setTimeout(function() { location.reload(); }, 800);
           }
@@ -205,7 +205,7 @@
     function deleteFunction() {
       showConfirmationDialog('"${model.getPlugin().getName()}"' + ' plugin will be deleted. Proceed?', function() {
         $.ajax({
-            url: '/storage/' + encodeURIComponent('${model.getPlugin().getName()}') + '.json',
+            url: '/hdsp-queryengine/storage/' + encodeURIComponent('${model.getPlugin().getName()}') + '.json',
             method: 'DELETE',
             contentType: 'application/json',
             success: serverMessage,
@@ -231,7 +231,7 @@
           format = 'conf';
         }
 
-        let url = '/storage/' + encodeURIComponent(exportInstance) + '/export/' + format;
+        let url = '/hdsp-queryengine/storage/' + encodeURIComponent(exportInstance) + '/export/' + format;
         window.open(url);
       });
     })

@@ -20,11 +20,11 @@
 
 <#include "*/generic.ftl">
 <#macro page_head>
-  <script src="/static/js/jquery.form.js"></script>
+  <script src="/hdsp-queryengine/static/js/jquery.form.js"></script>
   <!-- Ace Libraries for Syntax Formatting -->
-  <script src="/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/static/js/credentialsServerMessage.js"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/ace-code-editor/theme-eclipse.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/hdsp-queryengine/static/js/credentialsServerMessage.js"></script>
 </#macro>
 
 <#macro page_body>
@@ -75,7 +75,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
-            <form id="createForm" role="form" action="/credentials/update_credentials" method="POST">
+            <form id="createForm" role="form" action="/hdsp-queryengine/credentials/update_credentials" method="POST">
               <input type="text" class="form-control" name="username" id="usernameField" placeholder="Username" />
               <input type="text" class="form-control" name="password" id="passwordField" placeholder="Password" />
               <input type="hidden" name="plugin" id="plugin" />

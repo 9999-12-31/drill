@@ -23,7 +23,7 @@
 
 <#macro page_body>
   <div align="center" class="table-responsive">
-    <form role="form" name="input" action="/j_security_check" method="POST">
+    <form role="form" name="input" action="/hdsp-queryengine/j_security_check" method="POST">
       <fieldset>
         <div class="form-group">
           <img src="/static/img/apache-drill-logo.png" alt="Apache Drill Logo">

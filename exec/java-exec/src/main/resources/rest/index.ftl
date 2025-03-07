@@ -233,7 +233,7 @@
       function getRefreshTime() {
           $.ajax({
               type: 'GET',
-              url: '/gracePeriod',
+              url: '/hdsp-queryengine/gracePeriod',
               dataType: "json",
               complete: function (data) {
                   let gracePeriod = data.responseJSON["gracePeriod"];
@@ -249,7 +249,7 @@
       function reloadStatus () {
           let result = $.ajax({
                       type: 'GET',
-                      url: '/state',
+                      url: '/hdsp-queryengine/state',
                       dataType: "json",
                       complete: function(data) {
                             fillStatus(data,size);
@@ -274,7 +274,7 @@
               }
               let address = currentRow.find("#address").contents().get(0).nodeValue.trim();
               let restPort = currentRow.find("#httpPort").contents().get(0).nodeValue.trim();
-              let altStateUrl = location.protocol + "//" + address+":"+restPort + "/state";
+              let altStateUrl = location.protocol + "//" + address+":"+restPort + "/hdsp-queryengine/state";
               let altResponse = $.ajax({
                url:altStateUrl, 
                dataType:'json', 
@@ -410,7 +410,7 @@
 
       //Updates the outstanding queries in flight before shutdown
       function fillQueryCount(row_id) {
-          let requestPath = "/queriesCount";
+          let requestPath = "/hdsp-queryengine/queriesCount";
           let url = getRequestUrl(requestPath);
           let result = $.ajax({
                         type: 'GET',
@@ -478,7 +478,7 @@
 
       //Update memory
       function updateMetricsHtml(drillbit, isCurrent, idx) {
-        let drillbitURL = isCurrent ? "/status/metrics" : "/status/metrics/" + drillbit;
+        let drillbitURL = isCurrent ? "/hdsp-queryengine/status/metrics" : "/hdsp-queryengine/status/metrics/" + drillbit;
         let result = $.ajax({
           type: 'GET',
           url: drillbitURL,

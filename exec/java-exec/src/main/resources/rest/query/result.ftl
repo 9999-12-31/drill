@@ -19,8 +19,8 @@
 -->
 <#include "*/generic.ftl">
 <#macro page_head>
-    <script type="text/javascript" language="javascript"  src="/static/js/datatables.min.js"> </script>
-    <link href="/static/css/datatables.min.css" rel="stylesheet">
+    <script type="text/javascript" language="javascript"  src="/hdsp-queryengine/static/js/datatables.min.js"> </script>
+    <link href="/hdsp-queryengine/static/css/datatables.min.css" rel="stylesheet">
     <style>
       /* See comments above DataTable initialisation. */
       .dataTables_scroll
@@ -110,7 +110,7 @@
 
     //Pop out profile (needed to avoid losing query results)
     function popOutProfile(queryId) {
-      var profileUrl = location.protocol+'//'+ location.host+'/profiles/'+queryId;
+      var profileUrl = location.protocol+'//'+ location.host+'/hdsp-queryengine/profiles/'+queryId;
       var tgtWindow = '_blank';
       window.open(profileUrl, tgtWindow);
     }

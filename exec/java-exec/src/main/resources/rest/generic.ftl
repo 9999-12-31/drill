@@ -31,14 +31,14 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
       <title>Apache Drill</title>
-      <link rel="shortcut icon" href="/static/img/drill.ico">
+      <link rel="shortcut icon" href="/hdsp-queryengine/static/img/drill.ico">
 
-      <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/static/css/drillStyle.css" rel="stylesheet">
+      <link href="/hdsp-queryengine/static/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/hdsp-queryengine/static/css/drillStyle.css" rel="stylesheet">
 
-      <script type="text/javascript" language="javascript" src="/static/js/jquery-3.6.1.min.js"></script>
-      <script src="/static/js/popper.min.js"></script>
-      <script src="/static/js/bootstrap.min.js"></script>
+      <script type="text/javascript" language="javascript" src="/hdsp-queryengine/static/js/jquery-3.6.1.min.js"></script>
+      <script src="/hdsp-queryengine/static/js/popper.min.js"></script>
+      <script src="/hdsp-queryengine/static/js/bootstrap.min.js"></script>
 
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
@@ -60,38 +60,38 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Apache Drill</a>
+            <a class="navbar-brand" href="/hdsp-queryengine">Query Engine</a>
           </div>
           <div class="navbar-collapse collapse">
             <#if showControls == true>
             <ul class="nav navbar-nav mr-auto">
-              <li class="nav-item"><a class="nav-link" href="/query">Query</a></li>
-              <li class="nav-item"><a class="nav-link" href="/profiles">Profiles</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/query">Query</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/profiles">Profiles</a></li>
               <#if showCredentials == true>
-              <li class="nav-item"><a class="nav-link" href="/credentials">Credentials</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/credentials">Credentials</a></li>
               </#if>
               <#if showStorage == true>
-              <li class="nav-item"><a class="nav-link" href="/storage">Storage</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/storage">Storage</a></li>
               </#if>
-              <li class="nav-item"><a class="nav-link" href="/metrics">Metrics</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/metrics">Metrics</a></li>
               <#if showThreads == true>
-              <li class="nav-item"><a class="nav-link" href="/threads">Threads</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/threads">Threads</a></li>
               </#if>
               <#if showLogs == true>
-                  <li class="nav-item"><a class="nav-link" href="/logs">Logs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/logs">Logs</a></li>
               </#if>
             </ul>
             </#if>
             <ul class="nav navbar-nav navbar-right">
               <#if showOptions == true>
-              <li class="nav-item"><a class="nav-link" href="/options">Options</a></li>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/options">Options</a></li>
               </#if>
               <li class="nav-item"><a class="nav-link" href="http://drill.apache.org/docs/">Documentation</a>
               <#if showLogin == true >
-              <li class="nav-item"><a class="nav-link" href="/mainLogin">Log In</a>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/mainLogin">Log In</a>
               </#if>
               <#if showLogout == true >
-              <li class="nav-item"><a class="nav-link" href="/logout">Log Out (${loggedInUserName})</a>
+              <li class="nav-item"><a class="nav-link" href="/hdsp-queryengine/logout">Log Out (${loggedInUserName})</a>
               </#if>
             </ul>
           </div>

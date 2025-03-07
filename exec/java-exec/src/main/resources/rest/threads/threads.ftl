@@ -31,7 +31,7 @@
   </div>
   </div>
   <script>
-    var statusUrl = location.protocol + "//" + location.host + "/status/threads";
+    var statusUrl = location.protocol + "//" + location.host + "/hdsp-queryengine/status/threads";
     var refreshInterval = 3;
     document.getElementById('refreshTimeLabel').innerHTML = refreshInterval+" sec"; 
     var update = function() {
