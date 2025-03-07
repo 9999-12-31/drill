@@ -60,7 +60,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/hdsp-queryengine">Query Engine</a>
+            <a class="navbar-brand" href="/hdsp-queryengine">HDSP Query Engine</a>
           </div>
           <div class="navbar-collapse collapse">
             <#if showControls == true>
