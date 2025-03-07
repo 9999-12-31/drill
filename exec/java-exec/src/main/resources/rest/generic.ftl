@@ -30,8 +30,8 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <title>Apache Drill</title>
-      <link rel="shortcut icon" href="/hdsp-queryengine/static/img/drill.ico">
+      <title>Query Engine</title>
+      <link rel="shortcut icon" href="/hdsp-queryengine/static/img/favicon.png">
 
       <link href="/hdsp-queryengine/static/css/bootstrap.min.css" rel="stylesheet">
       <link href="/hdsp-queryengine/static/css/drillStyle.css" rel="stylesheet">
@@ -60,7 +60,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/hdsp-queryengine">HDSP Query Engine</a>
+            <a class="navbar-brand" href="/hdsp-queryengine">Query Engine</a>
           </div>
           <div class="navbar-collapse collapse">
             <#if showControls == true>
