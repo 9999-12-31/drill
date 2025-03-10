@@ -426,7 +426,7 @@
         function shutdown(shutdownBtn) {
             let rowElem = $(shutdownBtn).parent().parent();
             let hostAddr = $(rowElem).find('#address').contents().get(0).nodeValue.trim();
-            let url = rowElem.find("#current").html() === "Current" ? "/gracefulShutdown" : "/gracefulShutdown/" + hostAddr;
+            let url = rowElem.find("#current").html() === "Current" ? "/hdsp-queryengine/gracefulShutdown" : "/hdsp-queryengine/gracefulShutdown/" + hostAddr;
 
             showConfirmationDialog("Are you sure you want to shutdown Drillbit running on " + hostAddr + " node?", function() {
               let result = $.ajax({

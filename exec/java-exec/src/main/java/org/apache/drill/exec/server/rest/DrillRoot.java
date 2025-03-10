@@ -154,7 +154,7 @@ public class DrillRoot {
   @Operation(externalDocs = @ExternalDocumentation(description = "Apache Drill REST API documentation:", url = "https://drill.apache.org/docs/stopping-drill/"))
 
   public String shutdownDrillbitByName(@PathParam("hostname") String hostname) throws Exception {
-    URL shutdownURL = WebUtils.getDrillbitURL(work, request, hostname, "/gracefulShutdown");
+    URL shutdownURL = WebUtils.getDrillbitURL(work, request, hostname, "/hdsp-queryengine/gracefulShutdown");
     return WebUtils.doHTTPRequest(new HttpPost(shutdownURL.toURI()), work.getContext().getConfig());
   }
 
